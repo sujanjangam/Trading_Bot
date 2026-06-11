@@ -98,3 +98,27 @@ jobs:
         scan-ref: '.'
         format: 'table'
         exit-code: '0'
+
+  docker-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+    
+    - name: Build backend Docker image
+      run: |
+        cd backend
+        docker build -t trading-bot-backend:test .
+    
+    - name: Build frontend Docker image
+      run: |
+        cd frontend
+        docker build -t trading-bot-frontend:test .
+    
+    - name: Test Docker Compose
+      run: |
+        docker-compose config
+        echo "Docker Compose configuration is valid"

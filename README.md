@@ -240,7 +240,32 @@ Trading_Bot/
 ### Prerequisites
 - **Python 3.9+** with pip
 - **Node.js v18+** with npm
+- **Docker & Docker Compose** (optional, recommended)
 - **Zerodha Kite Account** with API credentials
+
+### Option 1: Docker Setup (Recommended)
+
+1. **Clone and configure:**
+   ```bash
+   git clone https://github.com/sujanjangam/Trading_Bot.git
+   cd Trading_Bot
+   cp backend/.env.example backend/.env
+   # Edit backend/.env and add your Zerodha API credentials
+   ```
+
+2. **Build and run:**
+   ```bash
+   docker-compose up -d --build
+   ```
+
+3. **Access the application:**
+   - Frontend: http://localhost
+   - Backend API: http://localhost:8000
+   - API Docs: http://localhost:8000/docs
+
+See [DOCKER.md](DOCKER.md) for detailed Docker setup and commands.
+
+### Option 2: Manual Setup
 
 ### Backend Setup
 
@@ -317,6 +342,7 @@ Trading_Bot/
 
 ## 📚 Documentation
 
+- **[Docker Setup Guide](DOCKER.md)** - Complete Docker setup, deployment, and troubleshooting
 - **[Backend Documentation](backend/README.md)** - Detailed backend setup, API endpoints, and architecture
 - **[Frontend Documentation](frontend/README.md)** - UI components, state management, and usage guide
 - **[Security Guide](backend/SECURITY.md)** - Security best practices and credential management
