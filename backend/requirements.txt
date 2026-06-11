@@ -1,15 +1,27 @@
-fastapi
-uvicorn[standard]
-python-dotenv
-kiteconnect
-numpy   
-pandas
-pandas_ta
-scipy
-websockets
-SQLAlchemy
-gunicorn
-tqdm
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+gunicorn==21.2.0
 
-# venv/bin/activate source(to be once on restart of vs code)
-# gunicorn -w 1 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:8000
+# Environment & Configuration
+python-dotenv==1.0.0
+
+# Trading & Market Data
+kiteconnect==4.3.0
+
+# Data Processing
+numpy==1.24.3
+pandas==2.0.3
+pandas-ta==0.3.14b0
+scipy==1.10.1
+
+# WebSocket
+websockets==12.0
+
+# Database
+SQLAlchemy==2.0.25
+
+# Utilities
+tqdm==4.66.1
+requests==2.31.0
+aiohttp==3.9.1
