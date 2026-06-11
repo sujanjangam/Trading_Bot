@@ -1,5 +1,7 @@
 # Trading Bot - Advanced Algorithmic Trading System
 
+[![CI](https://github.com/sujanjangam/Trading_Bot/actions/workflows/ci.yml/badge.svg)](https://github.com/sujanjangam/Trading_Bot/actions/workflows/ci.yml)
+
 A production-ready, full-stack algorithmic trading bot built with Python (FastAPI) and React. This system integrates with Zerodha Kite broker API to execute sophisticated multi-strategy trading with real-time market data processing, intelligent risk management, and comprehensive performance analytics.
 
 ## 🎯 Overview
