@@ -1,0 +1,383 @@
+/* DashboardStyles.css */
+
+.analyze-dashboard {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+}
+
+.dashboard-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-controls h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.market-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  margin: 0 0 15px 0;
+  padding-left: 15px;
+  color: #333;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count-badge {
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #ddd, #f0f0f0, #ddd);
+  margin: 30px 0;
+}
+
+.analyze-table-wrapper {
+  overflow-x: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.analyze-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+}
+
+.analyze-table thead th {
+  color: #7d8da1;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 12px 16px;
+  text-align: right;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.analyze-table thead th:first-child {
+  text-align: left;
+}
+
+.analyze-table tbody tr {
+  border-bottom: 1px solid #edf2f7;
+  transition: background-color 0.2s;
+}
+
+.analyze-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.analyze-table tbody td {
+  padding: 16px;
+  vertical-align: middle;
+  text-align: right;
+  color: #2d3748;
+}
+
+.analyze-table tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #4a5568;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.modal-badge {
+  background: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+.error-state {
+  padding: 30px;
+  text-align: center;
+  color: #e74c3c;
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 8px;
+  border: 2px solid #f8d7da;
+  margin: 20px 0;
+}
+
+.error-state h3 {
+  margin-bottom: 15px;
+  color: #721c24;
+}
+
+.error-state p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.view-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.view-btn {
+  padding: 8px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.view-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* Heat Map Grid */
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* Add this class for the Price text */
+.stock-price-highlight {
+  background-color: rgba(255, 255, 255, 0.25); /* Semi-transparent white bubble */
+  padding: 4px 10px;
+  border-radius: 12px;       /* Pill shape */
+  font-weight: 800;          /* Extra bold */
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Slight shadow for readability */
+  backdrop-filter: blur(2px); /* Optional: Adds a glass blur effect */
+  display: inline-block;
+  margin-left: auto;         /* Pushes it to the right if in a flex container */
+}
+
+.stock-card {
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stock-card:hover {
+  transform: translateY(-3px);
+}
+
+.card-bg-high-pos { background-color: #2e6b2e; }
+.card-bg-med-pos { background-color: #4a8528; }
+.card-bg-low-pos { background-color: #aebd35; color: white; }
+.card-bg-neg { background-color: #d14e4e; }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.card-percent {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.stock-symbol {
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.info-icon {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 8px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 700px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  font-size: 14px;
+}
+
+.modal-header {
+  background: #007bff;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-top-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-price { font-size: 1.3rem; font-weight: bold; }
+.positive-text { color: #28a745; margin-left: 8px; font-size: 0.9rem;}
+.expiry-select { padding: 5px; border-radius: 4px; border: 1px solid #ddd;}
+
+.ohlc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #eee;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.ohlc-item {
+  background: white;
+  text-align: center;
+  padding: 10px;
+}
+.ohlc-label { color: #888; font-size: 0.8rem; margin-bottom: 4px; }
+.ohlc-value { font-weight: 600; }
+
+.modal-tabs {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 15px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #eee;
+}
+
+.data-cell {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+
+.data-cell:nth-child(even) { border-right: none; }
+.data-label { color: #666; }
+.data-value { font-weight: 500; }
+
+.text-green { color: #28a745; }
+.text-red { color: #dc3545; }
+
+.trend-value {
+  font-size: 13px;
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.positive {
+  color: #38a169;
+}
+
+.negative {
+  color: #e53e3e;
+}
+
+.text-muted {
+  color: #718096;
+}
+
+/* Price change colors in table */
+.analyze-table .card-bg-high-pos { color: #38a169; font-weight: 500; }
+.analyze-table .card-bg-med-pos { color: #38a169; font-weight: 500; }
+.analyze-table .card-bg-low-pos { color: #38a169; font-weight: 500; }
+.analyze-table .card-bg-neg { color: #e53e3e; font-weight: 500; }

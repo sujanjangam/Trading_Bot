@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "last_updated": "2024-12-12",
+    "description": "Stock exclusion lists for high volume scanner",
+    "update_frequency": "Quarterly or when index constituents change"
+  },
+  "nifty50": [
+    "RELIANCE", "TCS", "HDFCBANK", "BHARTIARTL", "ICICIBANK", "INFOSYS", "SBIN", "LICI",
+    "ITC", "HINDUNILVR", "LT", "HCLTECH", "MARUTI", "SUNPHARMA", "TITAN", "ONGC",
+    "TATAMOTORS", "NTPC", "AXISBANK", "NESTLEIND", "KOTAKBANK", "ULTRACEMCO", "ASIANPAINT",
+    "BAJFINANCE", "WIPRO", "M&M", "TATACONSUM", "JSWSTEEL", "POWERGRID", "LTIM", "TECHM",
+    "HINDALCO", "COALINDIA", "INDUSINDBK", "TATASTEEL", "CIPLA", "BAJAJFINSV", "GRASIM",
+    "HDFCLIFE", "SBILIFE", "BPCL", "EICHERMOT", "HEROMOTOCO", "APOLLOHOSP", "ADANIENT",
+    "BRITANNIA", "DIVISLAB", "DRREDDY", "TRENT", "ADANIPORTS"
+  ],
+  "sensex": [
+    "RELIANCE", "TCS", "HDFCBANK", "ICICIBANK", "BHARTIARTL", "INFOSYS", "SBIN", "LICI",
+    "ITC", "HINDUNILVR", "LT", "MARUTI", "SUNPHARMA", "ONGC", "NTPC", "AXISBANK",
+    "KOTAKBANK", "ULTRACEMCO", "ASIANPAINT", "NESTLEIND", "BAJFINANCE", "M&M", "POWERGRID",
+    "TECHM", "TATAMOTORS", "TITAN", "INDUSINDBK", "HCLTECH", "WIPRO", "JSWSTEEL"
+  ]
+}
