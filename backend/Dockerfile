@@ -2,13 +2,14 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies required for pandas, numpy, scipy
+# Install system dependencies required for pandas, numpy, scipy and git for pandas_ta
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
     gfortran \
     libopenblas-dev \
     liblapack-dev \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first for better caching
